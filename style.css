@@ -176,6 +176,11 @@ body {
     margin: 0 auto;
 }
 
+.socials{
+    color:#0ea5e9;
+    
+}
+
 .resource-item {
     display: flex;
     align-items: center;
