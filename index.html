@@ -3,47 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes de Datos 2026-01</title>
-    <link rel = "stylesheet" href="style.css">
+    <title>Ayudantía de Redes 01-2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav> 
-        <ul> 
-            <li> Inicio</li>
-            <li> Laboratorios</li>
-            <li> Horarios de Ayudantia</li>
+    <nav class="navbar">
+        <div class="logo">Ayudantía<span>Redes</span></div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#temario">Temario</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
-    <header> 
-
-        <h1>Todo lo necesario para aprender sobre Redes de Datos.</h1>
-        
-        <h2> En esta pagina estaran todos los recursos necesarios para que les vaya bonito en el semestre. </h2> 
-
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Empieza tu camino en el mundo de las redes!.</h1>
+            <p>Aqui encontraras informacion acerca del curso y material de estudio tanto para laboratorios como para catedras.</p>
+            <div class="hero-buttons">
+                <a href="#recursos" class="btn primary">Ver Material</a>
+                <a href="#temario" class="btn secondary">Ver Temario</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <i class="fas fa-network-wired"></i>
+        </div>
     </header>
 
-    <main>
-        
-        <section>
-            <h2> Paginas de ayuda</h1>
-        </section>
+    <section id="temario" class="container">
+        <h2 class="section-title">Temas Principales</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                <h3>Modelos de Referencia </h3>
+                <p>Modelo OSI y Modelo TCP-IP .</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-route"></i></div>
+                <h3>Enrutamiento</h3>
+                <p>Protocolos de enrutamiento (RIPv2, EIGRP, OSPF, etc).</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-exchange-alt"></i></div>
+                <h3>Dispositivos de red y toplogias </h3>
+                <p>Switches, Routers, Conmutadores y Access Points.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-sitemap"></i></div>
+                <h3>Direccionamiento IP</h3>
+                <p>Ejercicios de IPv4, máscaras de subred y VLSM.</p>
+            </div>
+        </div>
+    </section>
 
-        <section> 
-            <h2> descargar packet tracer </h1>
-        </section>
+    <section id="recursos" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Recursos de Estudio</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <span>📄</span>
+                    <div class="res-info">
+                        <h4>Guía de Ejercicios: Subnetting</h4>
+                        <p>PDF con 50 ejercicios resueltos de VLSM.</p>
+                    </div>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i></a>
+                </div>
+                <div class="resource-item">
+                    <span>💻</span>
+                    <div class="res-info">
+                        <h4>Laboratorio Cisco Packet Tracer</h4>
+                        <p>Topología base para la configuración de Routers y Switches.</p>
+                    </div>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2> laboratorios de ayuda </h2> 
-        </section>
-    
-
-    </main>
-    
-    <footer> 
-        <p>Todos los derechos reservados al mejor ayudante del mundo si o no</p>
+    <footer id="contacto">
+        <p>&copy; 2026 Ayudantía de Redes -  by Sebastian Quintero.</p>
+        <div class="socials">
+            <a  type= "mail" href="sebastian.quintero@mail.udp.cl"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
