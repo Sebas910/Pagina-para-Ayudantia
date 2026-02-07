@@ -181,6 +181,28 @@ body {
     
 }
 
+.contact-section h2{
+    color:#0ea5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section p{
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px 0px 25px;
+}
+
+.contact-section a{
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
 .resource-item {
     display: flex;
     align-items: center;
