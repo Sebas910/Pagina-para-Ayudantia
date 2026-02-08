@@ -254,6 +254,27 @@ footer a{
     color: var(--link-color);
 }
 
+.contact-info {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#email-to-copy {
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: var(--card-bg);
+    border-radius: 4px;
+}
+
+#copy-btn {
+
+    border: 2px solid #3b82f6;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links { display: none; }

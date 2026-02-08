@@ -36,3 +36,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Funcionalidad para copiar el correo al portapapeles
+const copyBtn = document.getElementById('copy-btn');
+const emailText = document.getElementById('email-to-copy');
+
+if (copyBtn && emailText) {
+    copyBtn.addEventListener('click', () => {
+        const textToCopy = emailText.innerText;
+        
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            // Cambiar el texto del botón temporalmente para dar feedback
+            const originalText = copyBtn.innerText;
+            copyBtn.innerText = '¡Copiado!';
+            copyBtn.style.backgroundColor = '#3b82f6';
+            
+            setTimeout(() => {
+                copyBtn.innerText = originalText;
+                copyBtn.style.backgroundColor = '';
+            }, 2000);
+        }).catch(err => {
+            console.error('Error al copiar: ', err);
+        });
+    });
+}
