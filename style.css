@@ -272,7 +272,7 @@ footer a{
 
 #copy-btn {
 
-    border: 2px solid #3b82f6;
+    border: 2px solid var(--primary-color);
 }
 
 /* Responsive */
