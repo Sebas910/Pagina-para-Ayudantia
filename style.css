@@ -8,6 +8,10 @@
     --accent-color: #0ea5e9;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* Enlaces por defecto (tema claro) */
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--accent-color);
+    --parrafo-color: black;
 }
 
 /* Tema Oscuro (Sobrescribe variables) */
@@ -19,6 +23,10 @@ body.dark-mode {
     --secondary-color: #60a5fa;
     --nav-bg: rgba(15, 23, 42, 0.95);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    /* Enlaces más visibles en modo oscuro */
+    --link-color: #93c5fd; /* azul claro alto contraste */
+    --link-hover-color: #bfdbfe;
+    --parrafo-color: #93c5fd;
 }
 
 * {
@@ -168,6 +176,20 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Enlaces dentro de tarjetas */
+.card a {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+.card a:hover,
+.card a:focus {
+    color: var(--link-hover-color);
+}
+.card a:visited {
+    color: var(--link-color);
+}
+
 /* Lista de Recursos */
 .resources-section { background-color: var(--card-bg); padding: 4rem 5%; }
 
@@ -189,7 +211,7 @@ body {
 }
 
 .contact-section p{
-    color: black;
+    color: var(--text-color);
     align-items: center;
     justify-content: center;
     display: flex;
