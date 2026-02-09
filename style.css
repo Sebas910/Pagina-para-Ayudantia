@@ -149,6 +149,11 @@ body {
     color: var(--accent-color);
     opacity: 0.2;
 }
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+}
 
 /* Cards Grid */
 .container { padding: 4rem 5%; }
