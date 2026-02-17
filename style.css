@@ -159,6 +159,14 @@ body {
 .container { padding: 4rem 5%; }
 .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
 
+img {
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    border-color:var(--secondary-color);
+    border-width: 3px;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
