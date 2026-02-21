@@ -163,8 +163,7 @@ img {
     display: flex;
     justify-content: center;
     border-radius: 5%;
-    border-color:var(--secondary-color);
-    border-width: 3px;
+    border-color:var(--secondary-color);   border-width: 3px;
 }
 
 .cards-grid {

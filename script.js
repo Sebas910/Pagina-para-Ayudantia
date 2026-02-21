@@ -41,6 +41,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const copyBtn = document.getElementById('copy-btn');
 const emailText = document.getElementById('email-to-copy');
 
+const copytxt = document.getElementById('copytxt');
+
+if (copytxt) {
+    copytxt.addEventListener('mouseenter', () => {
+        copytxt.style.color = '#1f6dc6';
+    });
+
+    copytxt.addEventListener('mouseleave', () => {
+        copytxt.style.color = '';
+    });
+}
+
 if (copyBtn && emailText) {
     copyBtn.addEventListener('click', () => {
         const textToCopy = emailText.innerText;
