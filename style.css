@@ -119,6 +119,7 @@ body {
     margin-bottom: 1rem;
     background: linear-gradient(to right, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -160,10 +161,11 @@ body {
 .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
 
 img {
-    display: flex;
-    justify-content: center;
-    border-radius: 5%;
-    border-color:var(--secondary-color);   border-width: 3px;
+    display: block;
+    margin: 0 auto 3rem;
+    max-width: 100%;
+    border-radius: 3%;
+
 }
 
 .cards-grid {
