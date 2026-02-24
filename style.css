@@ -190,21 +190,93 @@ body {
     background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
 }
 
-.code-lines .line {
-    display: block;
-    height: 8px;
-    background-color: var(--accent-color);
-    margin-bottom: 15px;
-    border-radius: 4px;
-    opacity: 0.6;
-    animation: typeCode 2s infinite alternate;
+/* Network Animation inside Computer */
+.network-display {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.code-lines .line:nth-child(1) { width: 60%; animation-delay: 0.1s; }
-.code-lines .line:nth-child(2) { width: 80%; animation-delay: 0.3s; }
-.code-lines .line:nth-child(3) { width: 40%; animation-delay: 0.5s; background-color: var(--primary-color); }
-.code-lines .line:nth-child(4) { width: 90%; animation-delay: 0.7s; }
-.code-lines .line:nth-child(5) { width: 50%; animation-delay: 0.9s; background-color: var(--primary-color); }
+.node {
+    width: 25px;
+    height: 25px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 15px var(--accent-color);
+    opacity: 0.8;
+}
+
+.node-1 { top: 20%; left: 20%; }
+.node-2 { top: 20%; right: 20%; }
+.node-3 { bottom: 20%; left: 20%; }
+.node-4 { bottom: 20%; right: 20%; }
+
+.data-packet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #fff;
+    opacity: 0;
+}
+
+.p1 { animation: packet1 3s infinite linear; }
+.p2 { animation: packet2 4s infinite linear; animation-delay: 1s; }
+.p3 { animation: packet3 2.5s infinite linear; animation-delay: 0.5s; }
+
+.status-box {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: 'Courier New', monospace;
+    color: #4ade80;
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.status-box::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+}
+
+@keyframes packet1 {
+    0% { top: 20%; left: 20%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 20%; left: 80%; opacity: 0; } /* de node 1 a 2 */
+}
+
+@keyframes packet2 {
+    0% { top: 20%; left: 80%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 80%; left: 80%; opacity: 0; } /* de node 2 a 4 */
+}
+
+@keyframes packet3 {
+    0% { top: 80%; left: 20%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 20%; left: 20%; opacity: 0; } /* de node 3 a 1 */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 .base {
     width: 120px;
@@ -228,11 +300,6 @@ body {
 @keyframes floating {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
-}
-
-@keyframes typeCode {
-    0% { opacity: 0.2; transform: scaleX(0); transform-origin: left; }
-    100% { opacity: 0.6; transform: scaleX(1); transform-origin: left; }
 }
 
 /* Cards Grid */
