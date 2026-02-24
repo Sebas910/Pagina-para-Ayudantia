@@ -145,15 +145,94 @@ body {
 
 .btn:hover { transform: translateY(-3px); }
 
-.hero-visual i {
-    font-size: 15rem;
-    color: var(--accent-color);
-    opacity: 0.2;
-}
+/* Hero Visual Animation */
 .hero-visual {
+    flex: 1;
     display: flex;
     justify-content: center;
-    margin-right: 200px;
+    align-items: center;
+}
+
+.computer {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.monitor {
+    width: 450px;
+    height: 270px;
+    background-color: #333;
+    border: 15px solid #2d2d2d;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+    border-radius: 5px;
+    padding: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+.code-lines .line {
+    display: block;
+    height: 8px;
+    background-color: var(--accent-color);
+    margin-bottom: 15px;
+    border-radius: 4px;
+    opacity: 0.6;
+    animation: typeCode 2s infinite alternate;
+}
+
+.code-lines .line:nth-child(1) { width: 60%; animation-delay: 0.1s; }
+.code-lines .line:nth-child(2) { width: 80%; animation-delay: 0.3s; }
+.code-lines .line:nth-child(3) { width: 40%; animation-delay: 0.5s; background-color: var(--primary-color); }
+.code-lines .line:nth-child(4) { width: 90%; animation-delay: 0.7s; }
+.code-lines .line:nth-child(5) { width: 50%; animation-delay: 0.9s; background-color: var(--primary-color); }
+
+.base {
+    width: 120px;
+    height: 30px;
+    background-color: #2d2d2d;
+    margin: 0 auto;
+    position: relative;
+}
+
+.base::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -60px;
+    width: 240px;
+    height: 20px;
+    background-color: #252525;
+    border-radius: 12px 12px 0 0;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes typeCode {
+    0% { opacity: 0.2; transform: scaleX(0); transform-origin: left; }
+    100% { opacity: 0.6; transform: scaleX(1); transform-origin: left; }
 }
 
 /* Cards Grid */
