@@ -3,36 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayudantía de Redes 01-2026</title>
+    <meta name="description" content="Ayudantía de Redes de Datos 01-2026. Material de estudio, laboratorios, guías y recursos para catedrás y laboratorios.">
+    <title>Ayudantía de Redes de Datos · 01-2026</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Ayudantía<span>Redes</span></div>
-        <ul class="nav-links">
+    <!-- Barra de progreso de scroll -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="navbar" id="navbar">
+        <a href="#inicio" class="logo">
+            <i class="fas fa-network-wired"></i>
+            Ayudantía<span>Redes</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#temario">Temario</a></li>
             <li><a href="#recursos">Recursos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-btn">
-            <i class="fas fa-moon"></i>
-        </button>
 
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <header id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Empieza tu camino en el mundo de las redes!.</h1>
-            <p>Aqui encontraras informacion acerca del curso y material de estudio tanto para laboratorios como para catedras.</p>
-            <div class="hero-buttons">
-                <a href="#recursos" class="btn primary">Ver Material</a>
-                <a href="#temario" class="btn secondary">Ver Temario</a>
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content reveal">
+            <span class="hero-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Redes de Datos · Semestre 01-2026
+            </span>
+            <h1>Empieza tu camino en el mundo de las <span class="gradient-text">redes</span>.</h1>
+            <p>Aquí encontrarás información sobre el curso y material de estudio tanto para laboratorios como para cátedras. Todo en un solo lugar, listo para descargar.</p>
+            <div class="hero-butt   ons">
+                <a href="#recursos" class="btn primary"><i class="fas fa-folder-open"></i> Ver Material</a>
+                <a href="#temario" class="btn secondary"><i class="fas fa-list-ul"></i> Ver Temario</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">5</span>
+                    <span class="stat-label">Unidades</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">4</span>
+                    <span class="stat-label">Laboratorios</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">+10</span>
+                    <span class="stat-label">Recursos</span>
+                </div>
             </div>
         </div>
-        <div class="hero-visual">
+
+        <div class="hero-visual reveal">
             <div class="computer">
                 <div class="monitor">
                     <div class="screen">
@@ -51,78 +91,124 @@
                 <div class="base"></div>
             </div>
         </div>
-    </header>   
+    </header>
 
     <section id="temario" class="container">
-        <h2 class="section-title">Cronograma de Clases</h2>
-        <img src="Recursos/Calendario redes.webp">
-        <h2 class = "section-title"> Temas y vinculos </h2>
+        <div class="section-head reveal">
+            <span class="eyebrow">Planificación</span>
+            <h2 class="section-title">Cronograma de Clases</h2>
+            <p class="section-sub">Revisa las fechas y temas que veremos a lo largo del semestre.</p>
+        </div>
+
+        <figure class="calendar-figure reveal">
+            <img src="Recursos/Calendario redes.webp" alt="Calendario del curso de Redes de Datos">
+        </figure>
+
+        <div class="section-head reveal">
+            <span class="eyebrow">Contenidos</span>
+            <h2 class="section-title">Temas y Vínculos</h2>
+            <p class="section-sub">Material organizado por unidad. Descarga guías, pruebas de práctica y recursos externos.</p>
+        </div>
+
         <div class="cards-grid">
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-layer-group"></i></div>
-                <h3>Introduccion a las redes y Modelos de Referencia</h3>
-                <p> Conceptos basicos, Modelo OSI y Modelo TCP-IP.</p>
-                <p><a href="Recursos/Guia Para Estudio Redes de Datos.pdf">Descargar Guia</a> <br>
-                  <a href="Recursos/Pre-Control 1 Redes de Datos.docx">Descargar Pre-control 1</a></p>
+            <div class="card reveal">
+                <div class="card-top">
+                    <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                    <span class="badge badge-ready">Disponible</span>
+                </div>
+                <h3>Introducción a las redes y Modelos de Referencia</h3>
+                <p>Conceptos básicos, Modelo OSI y Modelo TCP/IP.</p>
+                <div class="card-links">
+                    <a href="Recursos/Guia Para Estudio Redes de Datos.pdf"><i class="fas fa-file-pdf"></i> Guía de estudio</a>
+                    <a href="Recursos/Pre-Control 1 Redes de Datos.docx"><i class="fas fa-file-word"></i> Pre-control 1</a>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-route"></i></div>
+
+            <div class="card reveal">
+                <div class="card-top">
+                    <div class="icon-box"><i class="fa-solid fa-route"></i></div>
+                    <span class="badge badge-ready">Disponible</span>
+                </div>
                 <h3>Enrutamiento y subredes</h3>
-                <p>Protocolos de enrutamiento (RIPv2, EIGRP, OSPF, etc) y calculo de subredes.</p>
-                <p><a href="Recursos/TABLA  VLSM   clase A-B-C.pdf">Tabla para calculo VLSM</a> </p>
-                <p><a href="Recursos/PRUEBA  VLSM  - 2023  4C.docx">Prueba de Subredes</a> </p>
+                <p>Protocolos de enrutamiento (RIPv2, EIGRP, OSPF, etc.) y cálculo de subredes.</p>
+                <div class="card-links">
+                    <a href="Recursos/TABLA  VLSM   clase A-B-C.pdf"><i class="fas fa-table"></i> Tabla VLSM</a>
+                    <a href="Recursos/PRUEBA  VLSM  - 2023  4C.docx"><i class="fas fa-file-word"></i> Prueba de subredes</a>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-exchange-alt"></i></div>
-                <h3>Dispositivos de red y toplogias "En Proceso"</h3>
+
+            <div class="card reveal">
+                <div class="card-top">
+                    <div class="icon-box"><i class="fas fa-exchange-alt"></i></div>
+                    <span class="badge badge-progress">En proceso</span>
+                </div>
+                <h3>Dispositivos de red y topologías</h3>
                 <p>Switches, Routers, Conmutadores y Access Points.</p>
-                <p><a href="https://www.cisco.com">mas informacion y material...</a> </p>
+                <div class="card-links">
+                    <a href="https://www.cisco.com" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Más información</a>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-sitemap"></i></div>
-                <h3>Direccionamiento IP "En Proceso"</h3>
+
+            <div class="card reveal">
+                <div class="card-top">
+                    <div class="icon-box"><i class="fas fa-sitemap"></i></div>
+                    <span class="badge badge-progress">En proceso</span>
+                </div>
+                <h3>Direccionamiento IP</h3>
                 <p>Ejercicios de IPv4, máscaras de subred y VLSM.</p>
-                <p><a href="https://www.netacad.com">mas informacion y material...</a> </p>
-
+                <div class="card-links">
+                    <a href="https://www.netacad.com" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Más información</a>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fa-brands fa-red-river"></i></div>
-                <h3>Protocolos de errores "En Proceso"</h3>
-                <p>Todo lo relacionado a la capa 2 del modelo OSI.</p>
-                <p><a href="https://ccnadesdecero.es/">mas informacion y material...</a> </p>
 
+            <div class="card reveal">
+                <div class="card-top">
+                    <div class="icon-box"><i class="fa-solid fa-bug"></i></div>
+                    <span class="badge badge-progress">En proceso</span>
+                </div>
+                <h3>Protocolos y control de errores</h3>
+                <p>Todo lo relacionado con la capa 2 del modelo OSI.</p>
+                <div class="card-links">
+                    <a href="https://ccnadesdecero.es/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Más información</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="recursos" class="resources-section">
         <div class="container">
-            <h2 class="section-title">Recursos de Estudio</h2>
+            <div class="section-head reveal">
+                <span class="eyebrow">Descargas</span>
+                <h2 class="section-title">Recursos de Estudio</h2>
+                <p class="section-sub">Material complementario que te acompañará durante todo el curso.</p>
+            </div>
+
             <div class="resource-list">
-                <div class="resource-item">
-                    <span>📄</span>
+                <div class="resource-item reveal">
+                    <div class="res-icon"><i class="fas fa-file-zipper"></i></div>
                     <div class="res-info">
                         <h4>Todos los laboratorios realizados (4 en total)</h4>
-                        <p>es un archivo .ZIP con los pdf de los laboratorios que realice cuando curse la asignatura.</p>
+                        <p>Archivo .ZIP con los PDF de los laboratorios que realicé cuando cursé la asignatura.</p>
                     </div>
-                    <a href="Recursos/Informes de Redes (Seccion X).zip" download="Informes de redes.zip" class="download-btn"><i class="fas fa-download"></i></a>
+                    <a href="Recursos/Informes de Redes (Seccion X).zip" download="Informes de redes.zip" class="download-btn" aria-label="Descargar laboratorios"><i class="fas fa-download"></i></a>
                 </div>
-                <div class="resource-item">
-                    <span>💻</span>
+
+                <div class="resource-item reveal">
+                    <div class="res-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="res-info">
-                        <h4>Descargar ultima version Cisco Packet Tracer</h4>
-                        <p>Contiene el link para instalar la ultima version de Cisco Packet Tracer desde la pagina oficial.
-                             NOTA: Se debe crear o iniciar sesion en la plataforma de Skills For All de Cisco para habilitar la descarga de los instaladores.</p>
+                        <h4>Descargar última versión de Cisco Packet Tracer</h4>
+                        <p>Link para instalar la última versión de Cisco Packet Tracer desde la página oficial. <strong>Nota:</strong> debes crear o iniciar sesión en Skills For All de Cisco para habilitar la descarga de los instaladores.</p>
                     </div>
-                    <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL" class="download-btn"><i class="fas fa-download"></i></a>
+                    <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL" target="_blank" rel="noopener" class="download-btn" aria-label="Ir a la descarga de Packet Tracer"><i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="resource-item">
-                    <span><i class="fa-solid fa-book-open"></i></span>
+
+                <div class="resource-item reveal">
+                    <div class="res-icon"><i class="fas fa-book-open"></i></div>
                     <div class="res-info">
-                        <h4>Libro guia de la Asignatura</h4>
-                        <p>Este es el libro usado de guia a lo largo del curso, en el puedes encontrar informacion mas detallada de todo lo que se vera en la asignatura, no obstante, no esta actualizado a las tecnologias actuales por lo que muchas de las cosas mencionadas ya no se utilizan (ej: la tecnologia 3G en moviles).</p>
+                        <h4>Libro guía de la asignatura</h4>
+                        <p>El libro usado como guía a lo largo del curso, con información más detallada de todo lo que se verá. Nota: no está actualizado a las tecnologías actuales, por lo que algunas cosas mencionadas ya no se utilizan (ej: la tecnología 3G en móviles).</p>
                     </div>
-                    <a href="Recursos/redes_de_computadoras-freelibros-org.pdf" class="download-btn"><i class="fas fa-download"></i></a>
+                    <a href="Recursos/redes_de_computadoras-freelibros-org.pdf" class="download-btn" aria-label="Descargar libro guía"><i class="fas fa-download"></i></a>
                 </div>
             </div>
         </div>
@@ -130,25 +216,33 @@
 
     <section id="contacto" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contacto</h2> 
-            <p>Si tienes alguna pregunta o necesitas ayuda puedes escribirme a cualquier hora <3 . </p>
-            <div class="contact-info">
-                <p id="copytxt">
-                    <span id="email-to-copy">sebastian.quintero@mail.udp.cl</span>
-                    <button id="copy-btn" class="btn primary">Copiar correo</button>
-                </p>
-                <a href="mailto:sebastian.quintero@mail.udp.cl" class="btn secondary">Enviar Correo</a>
+            <div class="contact-card reveal">
+                <span class="eyebrow">¿Dudas?</span>
+                <h2 class="section-title">Contacto</h2>
+                <p class="contact-lead">Si tienes alguna pregunta o necesitas ayuda, puedes escribirme a cualquier hora. ¡Estoy para apoyarte! &lt;3</p>
+                <div class="contact-info">
+                    <div id="copytxt" class="email-pill">
+                        <i class="fas fa-envelope"></i>
+                        <span id="email-to-copy">sebastian.quintero@mail.udp.cl</span>
+                        <button id="copy-btn" class="btn-copy"><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                    <a href="mailto:sebastian.quintero@mail.udp.cl" class="btn primary"><i class="fas fa-paper-plane"></i> Enviar correo</a>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-    <footer id="contacto">
-        <p >&copy; 2026 Ayudantía de Redes -  by Sebastian Quintero.</p>
-        <div class="socials">
-            <a   href="https://github.com/Sebas910"><i class="fab fa-github"></i></a>
-            <a href="mailto:sebastian.quintero@mail.udp.cl"><i class="fas fa-envelope"></i></a>
+    <footer>
+        <div class="footer-content">
+            <a href="#inicio" class="logo">
+                <i class="fas fa-network-wired"></i>
+                Ayudantía<span>Redes</span>
+            </a>
+            <p class="footer-credit">&copy; 2026 Ayudantía de Redes · por Sebastián Quintero.</p>
+            <div class="socials">
+                <a href="https://github.com/Sebas910" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:sebastian.quintero@mail.udp.cl" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 
